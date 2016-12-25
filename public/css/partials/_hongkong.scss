@@ -1,0 +1,104 @@
+$pink: #FEE1D6;
+$pink--dark: #FF2467;
+$blue: #136BF8;
+$green: #10FD59;
+$pink-shadow: 0 0 46px $pink--dark;
+
+%fringed {
+  &:after, &:before {
+    filter: blur(3px);
+    text-shadow: none;
+    width: 366px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &:after {
+    color: $blue;
+    margin-top: 3px;
+    margin-left: -366px + 3px;
+    opacity: .7;
+  }
+
+  &:before {
+    color: $green;
+    margin-top: -2px;
+    margin-left: -2px;
+    opacity: .6;
+  }
+}
+
+.location-container {
+  &--hong-kong {
+    @extend .location-container;
+    @extend %vertical-center;
+    justify-content: center;
+    background: url('../../img/hong_kong_skyline.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.hong-kong {
+  &__intro-card {
+
+    &-container {
+      @extend %vertical-center;
+    }
+
+    &-title {
+
+      &--chinese, &--english {
+        font-family: $playfair;
+        color: $pink;
+        text-shadow: $pink-shadow;
+      }
+
+      &--chinese {
+        font-size: 183px;
+        @extend %fringed;
+
+        &:after, &:before {
+          content: '香港';
+        }
+      }
+
+      &--english {
+        font-size: 59px;
+        @extend %fringed;
+
+        &:after, &:before {
+          content: 'Hong Kong';
+        }
+      }
+    }
+
+    &-separator {
+      width: 100%;
+      border-bottom: 6px $pink solid;
+      box-shadow: $pink-shadow;
+
+      &:before, &:after {
+        content: '';
+        filter: blur(3px);
+        width: 366px;
+        position: absolute;
+        z-index: -1;
+      }
+
+      &:before {
+        border-bottom: 6px $blue solid;
+        margin-top: 1px;
+        margin-left: 1px;
+        opacity: .8;
+      }
+
+      &:after {
+        border-bottom: 6px $green solid;
+        margin-top: -1px;
+        margin-left: -1px;
+        opacity: .6;
+      }
+    }
+  }
+}
