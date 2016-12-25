@@ -1,36 +1,36 @@
-$pink: #FEE1D6;
-$pink--dark: #FF2467;
-$blue: #136BF8;
-$green: #10FD59;
+$pink: #fee1d6;
+$pink--dark: #ff2467;
+$blue: #136bf8;
+$green: #10fd59;
 $pink-shadow: 0 0 46px $pink--dark;
 
 %fringed {
-  &:after, &:before {
+  &::after,
+  &::before {
     filter: blur(3px);
+    position: absolute;
     text-shadow: none;
     width: 366px;
-    position: absolute;
     z-index: -1;
   }
 
-  &:after {
+  &::after {
     color: $blue;
-    margin-top: 3px;
-    margin-left: -366px + 3px;
+    margin-top: 4px;
+    margin-left: -366px + 4px;
     opacity: .7;
   }
 
-  &:before {
+  &::before {
     color: $green;
-    margin-top: -2px;
-    margin-left: -2px;
-    opacity: .6;
+    margin-top: -3px;
+    margin-left: -3px;
+    opacity: .5;
   }
 }
 
 .location-container {
   &--hong-kong {
-    @extend .location-container;
     @extend %vertical-center;
     justify-content: center;
     background: url('../../img/hong_kong_skyline.jpg');
@@ -48,9 +48,10 @@ $pink-shadow: 0 0 46px $pink--dark;
 
     &-title {
 
-      &--chinese, &--english {
-        font-family: $playfair;
+      &--chinese,
+      &--english {
         color: $pink;
+        font-family: $playfair;
         text-shadow: $pink-shadow;
       }
 
@@ -58,7 +59,8 @@ $pink-shadow: 0 0 46px $pink--dark;
         font-size: 183px;
         @extend %fringed;
 
-        &:after, &:before {
+        &::after,
+        &::before {
           content: '香港';
         }
       }
@@ -67,33 +69,35 @@ $pink-shadow: 0 0 46px $pink--dark;
         font-size: 59px;
         @extend %fringed;
 
-        &:after, &:before {
+        &::after,
+        &::before {
           content: 'Hong Kong';
         }
       }
     }
 
     &-separator {
-      width: 100%;
       border-bottom: 6px $pink solid;
       box-shadow: $pink-shadow;
+      width: 100%;
 
-      &:before, &:after {
+      &::before,
+      &::after {
         content: '';
         filter: blur(3px);
-        width: 366px;
         position: absolute;
+        width: 366px;
         z-index: -1;
       }
 
-      &:before {
+      &::before {
         border-bottom: 6px $blue solid;
         margin-top: 1px;
         margin-left: 1px;
         opacity: .8;
       }
 
-      &:after {
+      &::after {
         border-bottom: 6px $green solid;
         margin-top: -1px;
         margin-left: -1px;
