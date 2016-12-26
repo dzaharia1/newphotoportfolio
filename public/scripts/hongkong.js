@@ -10,12 +10,8 @@ function createFocusRing () {
   });
 
   function focusRing(mouseX, backImage, title) {
-    let titleBlur = (Math.abs(50 - mouseX)) / 20;
-
-    let backImageBlur = Math.abs((-.0256 * Math.pow(mouseX, 2)) + (2.56 * mouseX) - 48) / 8;
-
-    console.log(`${mouseX} | ${backImageBlur}`);
-    // let backImageBlur = mouseX % 41;
+    let titleBlur = (Math.abs(50 - mouseX)) / 10;
+    let backImageBlur = ((-.0256 * Math.pow(mouseX, 2)) + (2.56 * mouseX) - 48) / 8;
 
     title.style.filter = `blur(${titleBlur}px)`;
     backImage.style.filter =  `blur(${backImageBlur}px)`;
