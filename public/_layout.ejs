@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dan Zaharia | Photography</title>
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dan Zaharia | Photography</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <script type="text/javascript" src="scripts/ui-min.js"></script> -->
+  </head>
+  <body>
+    <script>
+      var scripts = [];
+    </script>
 
-  <%- yield %>
+    <%- yield %>
 
-<script type="text/javascript" src="scripts/ui-min.js">
-</script>
-</body>
+    <script>
+    if (document.readyState != 'loading') {
+      console.log(`document readyState was ${document.readyState}`);
+      for (script of scripts) {
+        script();
+      }
+    }
+    else {
+    	document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded fired.');
+        for (script of scripts) {
+          script();
+        }
+      })
+    }
+    </script>
+
+  </body>
 </html>
