@@ -15,14 +15,12 @@
 
     <script>
     if (document.readyState != 'loading') {
-      console.log(`document readyState was ${document.readyState}`);
       for (script of scripts) {
         script();
       }
     }
     else {
     	document.addEventListener('DOMContentLoaded', () => {
-        console.log('DOMContentLoaded fired.');
         for (script of scripts) {
           script();
         }
