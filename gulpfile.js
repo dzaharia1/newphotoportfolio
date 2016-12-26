@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var harp = require('harp');
@@ -7,7 +8,7 @@ var minify = require('gulp-minify');
 var source  = {
   ejs: 'public/**/*.ejs',
   scss: 'public/css/**/*.scss',
-  js: 'public/scripts/ui.js'
+  js: 'public/scripts/**/*.js'
 }
 
 gulp.task('serve', function () {
@@ -34,9 +35,10 @@ gulp.task('watch', function () {
   });
   gulp.watch(source.js, function () {
     reload();
-    gulp.src(source.js)
-    .pipe(minify({}))
-    .pipe(gulp.dest('public/scripts/'))
+    // gulp.src(source.js)
+    // .pipe(plumber())
+    // .pipe(minify({}))
+    // .pipe(gulp.dest('public/scripts/'))
   })
 });
 
