@@ -105,7 +105,7 @@ $pink-shadow: 0 0 46px $pink--dark;
         opacity: .6;
       }
     }
-    
+
     &-background-image {
       position: absolute;
       width: 100%;
@@ -117,9 +117,14 @@ $pink-shadow: 0 0 46px $pink--dark;
     }
   }
 
-  &__page-container {
+  &__gallery {
     @extend %vertical-center;
     background-color: $dark-gray;
     width: 100%;
+
+    &-header {
+      @extend %fringed;
+      color: $pink;
+    }
   }
 }
