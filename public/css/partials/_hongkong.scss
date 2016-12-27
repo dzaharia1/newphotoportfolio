@@ -14,7 +14,7 @@ $pink-shadow--light: 0 0 20px $pink--dark;
 %fringed {
   &::after,
   &::before {
-    filter: blur(3px);
+    filter: blur(2px);
     position: absolute;
     text-shadow: none;
     width: 366px;
@@ -25,14 +25,14 @@ $pink-shadow--light: 0 0 20px $pink--dark;
     color: $blue;
     margin-top: 4px;
     margin-left: -366px + 4px;
-    opacity: .7;
+    opacity: .75;
   }
 
   &::before {
     color: $green;
     margin-top: -3px;
     margin-left: -3px;
-    opacity: .5;
+    opacity: .6;
   }
 }
 
