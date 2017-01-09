@@ -125,12 +125,13 @@ $pink-shadow--light: 0 0 20px $pink--dark;
     @extend %vertical-start;
     // background-color: $dark-gray;
     width: 100%;
-    padding: 4rem 10%;
+    padding: 4rem 10% 15rem;
 
     &-header {
       color: $pink;
       font-family: $playfair;
       text-shadow: $pink-shadow--light;
+      font-size: 3rem;
       margin-bottom: 4rem;
 
       &::after,
@@ -146,7 +147,7 @@ $pink-shadow--light: 0 0 20px $pink--dark;
       &::after {
         color: $blue;
         margin-top: 2px;
-        margin-left: -283 + 2px;
+        margin-left: -424 + 2px;
         opacity: .9;
       }
 
@@ -189,6 +190,7 @@ $pink-shadow--light: 0 0 20px $pink--dark;
 
         &-list {
           width: 65%;
+          list-style: none;
         }
       }
     }
