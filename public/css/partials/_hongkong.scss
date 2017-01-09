@@ -160,20 +160,21 @@ $pink-shadow--light: 0 0 20px $pink--dark;
     }
 
     &-section {
-      @extend %horizontal-start;
+      @extend %vertical-start;
       justify-content: space-between;
 
       &-text {
         font-family: $open-sans;
         color: $light-gray;
-        font-size: .75rem;
+        font-size: .875rem;
         line-height: 1.5rem;
-        width: 30%;
+        width: 60%;
+        margin-bottom: 4rem;
 
-        &--first-letter {
+        &--stick-up-cap {
           font-family: $playfair;
           text-shadow: $pink-shadow--light;
-          font-size: 5rem;
+          font-size: 3.5rem;
           line-height: 0;
         }
       }
@@ -183,14 +184,14 @@ $pink-shadow--light: 0 0 20px $pink--dark;
         max-height: 90vh;
         margin-bottom: 4rem;
 
+        &-list {
+          width: 100%;
+          list-style: none;
+        }
+
         img {
           max-height: 90vh;
           max-width: 100%;
-        }
-
-        &-list {
-          width: 65%;
-          list-style: none;
         }
       }
     }
