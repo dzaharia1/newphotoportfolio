@@ -15,7 +15,7 @@ function hkGallerySetup () {
       let imageCenter = image.getBoundingClientRect().top + (image.offsetHeight / 2);
       let filterFactor = Math.abs((imageCenter - (window.innerHeight / 2)) / 200).toFixed(4);
 
-      image.style.filter = `blur(${filterFactor}px)`;\
+      image.style.filter = `blur(${filterFactor}px)`;
     }
   });
 }
