@@ -171,7 +171,7 @@ $pink-shadow--light: 0 0 20px $pink--dark;
         width: 60%;
         margin-bottom: 4rem;
 
-        &--stick-up-cap {
+        ::first-letter {
           font-family: $playfair;
           text-shadow: $pink-shadow--light;
           font-size: 3.5rem;
