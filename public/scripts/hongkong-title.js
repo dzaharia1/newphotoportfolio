@@ -1,13 +1,7 @@
 function createFocusRing () {
   let hongKongContainer = document.querySelector('.location-container--hong-kong');
 
-  hongKongContainer.addEventListener('mousemove', (event) => {
-    // let mouseX = ((event.clientX / window.innerWidth) * 100).toFixed(0);
-    // let mouseY = ((event.clientY / window.innerHeight) * 100).toFixed(0);
-    focusRing(event.clientX, event.clientY + document.body.scrollTop, hongKongContainer);
-  });
-
-  function focusRing(mouseX, mouseY, container) {
+  let focusRing = (mouseX, mouseY, container) => {
     let backImage = container.querySelector('.hong-kong__intro-card-background-image');
     let title = container.querySelector('.hong-kong__intro-card-container');
     let containerYCenter = (container.getBoundingClientRect().bottom + container.getBoundingClientRect().top) / 2;
@@ -23,6 +17,12 @@ function createFocusRing () {
     backImage.style.filter = `blur(${backImageBlur}px)`;
     document.querySelector('.location-container--hong-kong').style.transform = `scale(${1.025 - (mousePercentage / 4000)})`;
   }
+
+  hongKongContainer.addEventListener('mousemove', (event) => {
+    focusRing(event.clientX, event.clientY + document.body.scrollTop, hongKongContainer);
+  });
+
+  focusRing(window.innerWidth / 2, window.innerHeight / 2, hongKongContainer);
 }
 
 scripts.push(createFocusRing);
