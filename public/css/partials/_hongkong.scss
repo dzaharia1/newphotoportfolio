@@ -64,8 +64,8 @@ $breakpoint-wide: 1200px;
       }
 
       &--chinese {
-        font-size: 183px;
         @extend %fringed;
+        font-size: 183px;
 
         &::after,
         &::before {
@@ -246,12 +246,6 @@ $breakpoint-wide: 1200px;
           width: 100%;
           list-style: none;
           margin-bottom: 2rem;
-
-          // @include breakpoint ($breakpoint-medium) {
-          //   :nth-child(2) {
-          //     width: 40%;
-          //   }
-          // }
 
         }
 
