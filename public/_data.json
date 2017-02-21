@@ -1,57 +1,35 @@
 {
-  "hongkong": [
-    {
-      "sectionSlug": "night",
-      "caption": "This place has balls. This lunging cluster of concrete and steel shreds the sky into ribbons. On cloudy nights, slants of mist will hazard the building-tops to mock the squabbling lights below. And along the crevices and cracks between the spires are the people. Fucking masses of people shouldering through the din. Don't ruin your jetlag by acclimating yourself to the daylight in this place. Cycles of day and night manipulate and distort the city.",
-      "images": [
-        "skyline",
-        "night_signs",
-        "hsbc_night",
-        "distant_icc"
-      ]
-    },
-    {
-      "sectionSlug": "day",
-      "caption": "The frenzy of Hong Kong will seem to disperse during the day. An orderliness overtakes the wide avenues and claustrophobic alleys. But the restless energy remains. Business people hustle up and down from the highest points in the city, protesters shriek passionately under tiny yellow flakes of color on the surface.",
-      "images": [
-        "soho",
-        "boc_clouds",
-        "hsbc_detail",
-        "buildings",
-        "signs",
-        "rush_hour",
-        "temple",
-        "peel_fresco",
-        "graffiti",
-        "scaffolding"
-      ]
-    },
-    {
-      "sectionSlug": "bump",
-      "caption": "Conversations between people here are like epic confrontations. Tone, volume, quality, expression. For understanding people, the ears are lost here when they only have a matter of days to learn. But the eyes pick up the slack, and with a certain cluelessness, they begin to fill in blanks, sometimes incorrectly, in making sense of what's going on.\nPeople here will exercise a certain distant coolness or even outright ignore one another until it becomes absolutely necessary not to. A conversation will begin seemingly completely one-sided. Then it will end before anyone has made any gesture of conclusion. Maybe there just isn't any time to dick around. Or maybe everyone here is so overwhelmed by one another that the slightest taste of powwow, gab, reciprocation or chatter would induce agida. \"There are enough of you shitheads between me and the rest of my day, so sell me that piece beef right there hanging third from the lef- wait, no the oth- yeah that one, and a pork bone and fuck off.\"",
-      "images": [
-        "butcher",
-        "protest",
-        "market_aisle",
-        "market_wide"
-      ]
-    },
-    {
-      "sectionSlug": "piledUp",
-      "caption": "More than any other public transportation, stepping onto the surface from the MTR for the first time feels like sprouting out of the safety of your seedshell for the first time and look up to find the sun blocked by the colonade of spires that preceded you. But that intimidation will fool you into thinking that there isn't room anywhere in Hong Kong.\nLess than 25% of Hong Kong's land area is developed, and rather than expand outward, some people will buckle down on a flat surface wide and low enough and make it work. More often, they'll let the lateral pressure force them further and further upward.",
-      "images": [
-        "platform_shack",
-        "residential",
-        "street_vendor",
-        "weird_building",
-        "dragon_center",
-        "mall",
-        "drying_clothes",
-        "mong_kok_apartment",
-        "construction",
-        "stacked",
-        "peak"
-      ]
-    }
-  ]
+  "hongkong": {
+    "images": [
+      "skyline",
+      "night_signs",
+      "hsbc_night",
+      "distant_icc",
+      "soho",
+      "boc_clouds",
+      "hsbc_detail",
+      "buildings",
+      "signs",
+      "rush_hour",
+      "temple",
+      "peel_fresco",
+      "graffiti",
+      "scaffolding",
+      "butcher",
+      "protest",
+      "market_aisle",
+      "market_wide",
+      "platform_shack",
+      "residential",
+      "street_vendor",
+      "weird_building",
+      "dragon_center",
+      "mall",
+      "drying_clothes",
+      "mong_kok_apartment",
+      "construction",
+      "stacked",
+      "peak"
+    ]
+  }
 }

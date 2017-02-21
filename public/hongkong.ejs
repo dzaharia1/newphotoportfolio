@@ -1,12 +1,9 @@
 <div class="hong-kong__gallery">
   <script src="scripts/hongkong-gallery.js"></script>
   <h1 class="hong-kong__gallery-header">香港 | Hong Kong</h1>
-
-  <%public._data.hongkong.forEach(function (gallery){ %>
     <section class="hong-kong__gallery-section">
       <ul class="hong-kong__gallery-section-image-list">
-        <!-- <p class="hong-kong__gallery-section-text"><%= gallery.caption %></p> -->
-      <% gallery.images.forEach(function (image) {%>
+      <% public._data.hongkong['images'].forEach(function (image) {%>
         <li class="hong-kong__gallery-section-image">
           <a href="img/hong_kong_<%= image %>.jpg" target="blank" class="hong-kong__gallery-section-image">
             <img src="img/hong_kong_<%= image %>.jpg" alt="">
@@ -15,5 +12,4 @@
       <%})%>
       </ul>
     </section>
-  <% }) %>
 </div>
