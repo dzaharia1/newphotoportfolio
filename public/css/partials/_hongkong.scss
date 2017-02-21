@@ -191,58 +191,58 @@ $breakpoint-wide: 1200px;
       @extend %vertical-start;
       justify-content: space-between;
 
-      &-text {
-        font-family: $open-sans;
-        color: $light-gray;
-        font-size: .75rem;
-        line-height: 1.25rem;
-        margin-bottom: 1rem;
-        padding: 0 10%;
-
-        @include breakpoint ($breakpoint-medium) {
-          width: 80%;
-          margin-bottom: 2rem;
-          padding: 0 10%;
-        }
-
-        @include breakpoint ($breakpoint-medium-wide) {
-          width: 60%;
-          padding: 0;
-          font-size: .875rem;
-          line-height: 1.5rem;
-        }
-
-        @include breakpoint ($breakpoint-wide) {
-          width: 30%;
-          margin-bottom: 4rem;
-        }
-
-        ::first-letter {
-          font-family: $playfair;
-          text-shadow: $pink-shadow--light;
-          font-size: 3.5rem;
-          line-height: 0;
-        }
-      }
+      // &-text {
+      //   font-family: $open-sans;
+      //   color: $light-gray;
+      //   font-size: .75rem;
+      //   line-height: 1.25rem;
+      //   margin-bottom: 1rem;
+      //   padding: 0 10%;
+      //
+      //   @include breakpoint ($breakpoint-medium) {
+      //     width: 80%;
+      //     margin-bottom: 2rem;
+      //     padding: 0 10%;
+      //   }
+      //
+      //   @include breakpoint ($breakpoint-medium-wide) {
+      //     width: 60%;
+      //     padding: 0;
+      //     font-size: .875rem;
+      //     line-height: 1.5rem;
+      //   }
+      //
+      //   @include breakpoint ($breakpoint-wide) {
+      //     width: 30%;
+      //     margin-bottom: 4rem;
+      //   }
+      //
+      //   ::first-letter {
+      //     font-family: $playfair;
+      //     text-shadow: $pink-shadow--light;
+      //     font-size: 3.5rem;
+      //     line-height: 0;
+      //   }
+      // }
 
       &-image {
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
 
-        @include breakpoint ($breakpoint-wide) {
-          :nth-child(2) {
-            width: 66%;
-          }
-        }
+        // @include breakpoint ($breakpoint-wide) {
+        //   :nth-child(2) {
+        //     width: 66%;
+        //   }
+        // }
 
         @include breakpoint ($breakpoint-medium) {
-          margin-bottom: 4rem;
+          // margin-bottom: 4rem;
         }
 
         &-list {
-          @extend %horizontal-start;
-          flex-wrap: wrap;
-          justify-content: space-between;
+          @extend %vertical-start;
+          // flex-wrap: wrap;
+          // justify-content: space-between;
           width: 100%;
           list-style: none;
           margin-bottom: 2rem;
