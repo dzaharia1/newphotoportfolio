@@ -13,35 +13,9 @@ $breakpoint-medium: 700px;
 $breakpoint-medium-wide: 800px;
 $breakpoint-wide: 1200px;
 
-// create the rules for title fringing
-// %fringed {
-//   &::after,
-//   &::before {
-//     filter: blur(2px);
-//     position: absolute;
-//     text-shadow: none;
-//     width: 366px;
-//     z-index: -1;
-//   }
-//
-//   &::after {
-//     color: $blue;
-//     margin-top: 4px;
-//     margin-left: -366px + 4px;
-//     opacity: .75;
-//   }
-//
-//   &::before {
-//     color: $green;
-//     margin-top: -3px;
-//     margin-left: -3px;
-//     opacity: .6;
-//   }
-// }
-//
-
-@mixin hong-kong__title ($english-font-size) {
-	&-title--chinese, &-title--english {
+@mixin hong-kong-title ($english-font-size) {
+	&-title--chinese,
+  &-title--english {
     font-family: $playfair;
 		text-shadow: $pink-shadow--heavy;
     color: $pink;
@@ -49,49 +23,47 @@ $breakpoint-wide: 1200px;
 	}
 
 	&-title--english {
-		@include hong-kong__title-fringe ($english-font-size, 'Hong Kong');
+		@include hong-kong-title-fringe ($english-font-size, 'Hong Kong');
 		font-size: $english-font-size;
 	}
 
 	&-title--chinese {
-		@include hong-kong__title-fringe ($english-font-size, '香港');
+		@include hong-kong-title-fringe ($english-font-size, '香港');
 		font-size: $english-font-size / .32;
 	}
 
 	&-separator {
-		@include hong-kong__title-fringe ($english-font-size, '');
+		@include hong-kong-title-fringe ($english-font-size, '');
 		width: $english-font-size / .16;
 		border: ($english-font-size / 10 - 2) $pink solid;
 		box-shadow: $pink-shadow--heavy;
 
-		&:after,
-		&:before {
+		&::after,
+		&::before {
 			width: $english-font-size / .16;
 			height: $english-font-size / 10 - 2;
 		}
 
-		&:after {
+		&::after {
 			margin-left: 3px;
 			background-color: $blue;
 		}
 
-		&:before {
+		&::before {
 			background-color: $green;
 		}
 	}
 }
 
-@mixin hong-kong__title-fringe ($english-font-size, $content) {
+@mixin hong-kong-title-fringe ($english-font-size, $content) {
 	&::after,
 	&::before {
 		filter: blur(2px);
 		position: absolute;
 		text-shadow: none;
-		// width: 366px;
 		width: $english-font-size / .16;
 		z-index: -1;
 	}
-
 
 	&::after {
 		content: $content;
@@ -119,10 +91,10 @@ $breakpoint-wide: 1200px;
 
 .hong-kong {
   &__intro-card {
-    @include hong-kong__title (40px);
+    @include hong-kong-title (40px);
 
     @include breakpoint ($breakpoint-medium) {
-      @include hong-kong__title (60px);
+      @include hong-kong-title (60px);
     }
 
     &-container {
@@ -130,65 +102,6 @@ $breakpoint-wide: 1200px;
       justify-content: center;
       filter: blur(0);
     }
-
-    // &-title {
-    //
-    //   &--chinese,
-    //   &--english {
-    //     color: $pink;
-    //     font-family: $playfair;
-    //     text-shadow: $pink-shadow--heavy;
-    //   }
-    //
-    //   &--chinese {
-    //     @extend %fringed;
-    //     font-size: 183px;
-    //
-    //     &::after,
-    //     &::before {
-    //       content: '香港';
-    //     }
-    //   }
-    //
-    //   &--english {
-    //     font-size: 59px;
-    //     @extend %fringed;
-    //
-    //     &::after,
-    //     &::before {
-    //       content: 'Hong Kong';
-    //     }
-    //   }
-    // }
-    //
-    // &-separator {
-    //   border-bottom: 6px $pink solid;
-    //   box-shadow: $pink-shadow--heavy;
-    //   width: 100%;
-    //
-    //   &::before,
-    //   &::after {
-    //     content: '';
-    //     filter: blur(3px);
-    //     position: absolute;
-    //     width: 366px;
-    //     z-index: -1;
-    //   }
-    //
-    //   &::before {
-    //     border-bottom: 6px $blue solid;
-    //     margin-top: 1px;
-    //     margin-left: 1px;
-    //     opacity: .8;
-    //   }
-    //
-    //   &::after {
-    //     border-bottom: 6px $green solid;
-    //     margin-top: -1px;
-    //     margin-left: -1px;
-    //     opacity: .6;
-    //   }
-    // }
 
     &-background-image {
       position: absolute;
