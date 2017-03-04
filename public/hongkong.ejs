@@ -1,15 +1,16 @@
 <div class="hong-kong__gallery">
   <script src="scripts/hongkong-gallery.js"></script>
   <h1 class="hong-kong__gallery-header">香港 | Hong Kong</h1>
-    <section class="hong-kong__gallery-section">
-      <ul class="hong-kong__gallery-section-image-list">
-      <% public._data.hongkong['images'].forEach(function (image) {%>
-        <li class="hong-kong__gallery-section-image">
-          <a href="img/hong_kong_<%= image %>.jpg" target="blank" class="hong-kong__gallery-section-image">
-            <img src="img/hong_kong_<%= image %>.jpg" alt="">
-          </a>
-        </li>
-      <%})%>
-      </ul>
-    </section>
+  <section class="hong-kong__gallery-section">
+    <ul class="hong-kong__gallery-section-image-list">
+    <% public._data.hongkong['images'].forEach(function (image) {%>
+      <li class="hong-kong__gallery-section-image">
+        <a href="img/hong_kong_<%= image %>.jpg" target="blank" class="hong-kong__gallery-section-image">
+          <img src="img/hong_kong_<%= image %>.jpg" alt="">
+        </a>
+      </li>
+    <%})%>
+    </ul>
+  </section>
+  <a href="/" class="hong-kong__gallery-header--back">back</a>
 </div>
