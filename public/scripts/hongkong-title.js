@@ -19,10 +19,14 @@ function createFocusRing () {
   }
 
   hongKongContainer.addEventListener('mousemove', (event) => {
-    focusRing(event.clientX, event.clientY + document.body.scrollTop, hongKongContainer);
+    if (window.innerWidth > 700) {
+      focusRing(event.clientX, event.clientY + document.body.scrollTop, hongKongContainer);
+    }
   });
 
-  focusRing(window.innerWidth / 2, window.innerHeight / 2, hongKongContainer);
+  if (window.innerWidth > 700) {
+    focusRing(window.innerWidth / 2, window.innerHeight / 2, hongKongContainer);
+  }
 }
 
 scripts.push(createFocusRing);
