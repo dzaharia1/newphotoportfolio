@@ -133,19 +133,23 @@ $breakpoint-wide: 1200px;
       font-family: $playfair;
       text-shadow: $pink-shadow--light;
       font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 900;
       margin-bottom: 4rem;
       padding: 0 10%;
+      white-space: nowrap;
       @include hong-kong-title-fringe(1.8 * 16px, '香港 | Hong Kong');
 
       &::after {
-        margin-left: -250px;
+        margin-left: -257px;
+        margin-top: 3px;
       }
 
       @include breakpoint ($breakpoint-medium) {
         font-size: 3rem;
 
         &::after {
-          margin-left: -420px;
+          margin-left: -433px;
         }
       }
 
@@ -160,10 +164,10 @@ $breakpoint-wide: 1200px;
       &--back {
         @extend .hong-kong__gallery-header;
         @include hong-kong-title-fringe(1.8 * 16px, 'back');
-        text-transform: lowercase;
+        font-size: 2rem;
 
         &::after {
-          margin-left: -129px;
+          margin-left: -87px;
         }
       }
     }
