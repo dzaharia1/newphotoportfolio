@@ -135,9 +135,18 @@ $breakpoint-wide: 1200px;
       font-size: 1.8rem;
       margin-bottom: 4rem;
       padding: 0 10%;
+      @include hong-kong-title-fringe(1.8 * 16 px, '香港 | Hong Kong');
+
+      &::after {
+        margin-left: -250px;
+      }
 
       @include breakpoint ($breakpoint-medium) {
         font-size: 3rem;
+
+        &::after {
+          margin-left: -420px;
+        }
       }
 
       @include breakpoint ($breakpoint-medium-wide) {
@@ -148,33 +157,33 @@ $breakpoint-wide: 1200px;
         margin-bottom: 5rem;
       }
 
-      &::after,
-      &::before {
-        content: '香港 | Hong Kong';
-        text-shadow: none;
-        filter: blur(1px);
-        width: auto;
-        position: absolute;
-        z-index: -1;
-      }
-
-      &::after {
-        color: $blue;
-        margin-top: 2px;
-        margin-left: -254 + 2px;
-        opacity: .9;
-
-        @include breakpoint ($breakpoint-medium) {
-          margin-left: -424 + 2px;
-        }
-      }
-
-      &::before {
-        color: $green;
-        margin-top: -2px;
-        margin-left: -2px;
-        opacity: .5;
-      }
+      // &::after,
+      // &::before {
+      //   content: '香港 | Hong Kong';
+      //   text-shadow: none;
+      //   filter: blur(1px);
+      //   width: auto;
+      //   position: absolute;
+      //   z-index: -1;
+      // }
+      //
+      // &::after {
+      //   color: $blue;
+      //   margin-top: 2px;
+      //   margin-left: -254 + 2px;
+      //   opacity: .9;
+      //
+      //   @include breakpoint ($breakpoint-medium) {
+      //     margin-left: -424 + 2px;
+      //   }
+      // }
+      //
+      // &::before {
+      //   color: $green;
+      //   margin-top: -2px;
+      //   margin-left: -2px;
+      //   opacity: .5;
+      // }
     }
 
     &-section {
