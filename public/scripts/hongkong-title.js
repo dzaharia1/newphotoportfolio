@@ -1,9 +1,9 @@
 function createFocusRing () {
   let hongKongContainer = document.querySelector('.location-container--hong-kong');
+  let backImage = document.querySelector('.hong-kong__intro-card-background-image');
+  let title = document.querySelector('.hong-kong__intro-card-container');
 
   let focusRing = (mouseX, mouseY, container) => {
-    let backImage = container.querySelector('.hong-kong__intro-card-background-image');
-    let title = container.querySelector('.hong-kong__intro-card-container');
     let containerYCenter = (container.getBoundingClientRect().bottom + container.getBoundingClientRect().top) / 2;
     let containerXCenter = (container.getBoundingClientRect().right + container.getBoundingClientRect().left) / 2;
     let circleRadius = (container.getBoundingClientRect().right - container.getBoundingClientRect().left) / 2;
@@ -21,6 +21,13 @@ function createFocusRing () {
   hongKongContainer.addEventListener('mousemove', (event) => {
     if (window.innerWidth > 700) {
       focusRing(event.clientX, event.clientY + document.body.scrollTop, hongKongContainer);
+    }
+  });
+
+  window.addEventListener('resize', (event) => {
+    if (window.innerWidth < 700) {
+      backImage.style.filter = '';
+      title.style.filter = '';
     }
   });
 
